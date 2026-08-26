@@ -5,13 +5,13 @@
 class Bb < Formula
   desc "Bitbucket Cloud CLI with GitHub CLI ergonomics"
   homepage "https://github.com/uehatsu/bb"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/uehatsu/bb/releases/download/v0.1.3/bb_0.1.3_darwin_amd64.tar.gz"
-      sha256 "bf1b6d29cb2f6aae588214a68a1b32e3c3f2313e2aa1ea85dc60c8dec80b8346"
+      url "https://github.com/uehatsu/bb/releases/download/v0.1.4/bb_0.1.4_darwin_amd64.tar.gz"
+      sha256 "7f430779623c6fa285a490695de42d40be289b71492060cf55d03129e3f859f9"
 
       define_method(:install) do
         bin.install "bb"
@@ -19,8 +19,8 @@ class Bb < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/uehatsu/bb/releases/download/v0.1.3/bb_0.1.3_darwin_arm64.tar.gz"
-      sha256 "58e9022092d7b0a2508ab554639d94561e8bd88b5a6f9f6b7ae0ffa24f0d6d16"
+      url "https://github.com/uehatsu/bb/releases/download/v0.1.4/bb_0.1.4_darwin_arm64.tar.gz"
+      sha256 "4433740e451a51ab24452bef3080ed8e06b4b3bb5b4847f1ba4dd48ddb19e9e1"
 
       define_method(:install) do
         bin.install "bb"
@@ -31,16 +31,16 @@ class Bb < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/uehatsu/bb/releases/download/v0.1.3/bb_0.1.3_linux_amd64.tar.gz"
-      sha256 "a5362dd86aa9dc63fb19cfbb8e33065ac586047ed4bd1111c80566d97bf13869"
+      url "https://github.com/uehatsu/bb/releases/download/v0.1.4/bb_0.1.4_linux_amd64.tar.gz"
+      sha256 "161541127604ad924033df54c34e42c939a7ea00da8d6eb276cb8ad88c14600c"
       define_method(:install) do
         bin.install "bb"
         generate_completions_from_executable(bin/"bb", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/uehatsu/bb/releases/download/v0.1.3/bb_0.1.3_linux_arm64.tar.gz"
-      sha256 "9c8b908040f6838ea991c5df7f531b4f61efa8d08d91b5878abfed18896bc197"
+      url "https://github.com/uehatsu/bb/releases/download/v0.1.4/bb_0.1.4_linux_arm64.tar.gz"
+      sha256 "78e57feb1750789974f5a4757005adabbadc86e8c44ab8eeba77140d17b769ec"
       define_method(:install) do
         bin.install "bb"
         generate_completions_from_executable(bin/"bb", "completion")
